@@ -14,7 +14,7 @@
     "eslint": "eslint --ext .js src/ test/",
     "stylelint": "stylelint --aei src/**/*.css",
     "pretest": "npm run htmlhint && npm run eslint && npm run stylelint",
-    "test": "jest --coverage",
+    "test": "jest --coverage --env=jsdom",
     "start": "serve src/"
   },
   "devDependencies": {
@@ -25,6 +25,8 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^24.1.0",
+    "firebase-mock": "^2.3.2",
+    "firestore-jest-mock": "^0.17.0",
     "htmlhint": "^0.15.1",
     "jest": "^27.0.1",
     "regenerator-runtime": "^0.13.1",
@@ -34,5 +36,20 @@
   },
   "engines": {
     "node": ">=10"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "firebase": "^8.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolozayurany/BOG003-social-network.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/tolozayurany/BOG003-social-network/issues"
+  },
+  "homepage": "https://github.com/tolozayurany/BOG003-social-network#readme"
 }

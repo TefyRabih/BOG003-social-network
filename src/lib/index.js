@@ -1,6 +1,10 @@
-// aqui exportaras las funciones que necesites
+/** Funcion para validar fecha  */
+export const validDate = (date) => {
+  const currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
+  const yearOfBirth = date.split('-');
 
-export const myFunction = () => {
-  // aqui tu codigo
-  console.log('Hola mundo!');
+  currentYear -= parseInt(yearOfBirth[0], 10);
+  currentYear = currentYear >= 100 || currentYear < 12;
+  return currentYear;
 };
